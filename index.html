@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Flight Booking</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Book a Flight</a>
+            <a href="#">Manage Booking</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <h1>Search Flights</h1>
+            <form id="searchForm">
+                <div class="form-group">
+                    <label for="fromAirport">From:</label>
+                    <select id="fromAirport" name="fromAirport"></select>
+                </div>
+                <div class="form-group">
+                    <label for="toAirport">To:</label>
+                    <select id="toAirport" name="toAirport"></select>
+                </div>
+                <button type="submit">Search Flights</button>
+            </form>
+        </section>
+
+        <section class="results-section">
+            <h2>Available Flights</h2>
+            <div id="flights" class="flights"></div>
+        </section>
+
+        <section class="booking-section">
+            <h2>Book Your Flight</h2>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number:</label>
+                    <input type="text" id="phoneNumber" name="phoneNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="cardNumber">Card Number:</label>
+                    <input type="text" id="cardNumber" name="cardNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="expirationDate">Expiration Date:</label>
+                    <input type="text" id="expirationDate" name="expirationDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" required>
+                </div>
+                <button type="submit">Book Flight</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
