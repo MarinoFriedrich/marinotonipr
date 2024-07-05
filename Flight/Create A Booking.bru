@@ -1,0 +1,27 @@
+meta {
+  name: Create A Booking
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:3000/api/bookings
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "userInfo": {
+      "email": "ime.prezime@email.com",
+      "phoneNumber": "+385123456789",
+      "fullName": "Ime Prezime"
+    },
+    "cardInfo": {
+      "cardNumber": "1234 1234 1234 1234",
+      "expirationDate": "08/28",
+      "cvv": "123"
+    },
+    "offerId": "RYR1"
+  }
+}

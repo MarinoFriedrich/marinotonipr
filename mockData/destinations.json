@@ -1,0 +1,87 @@
+{
+    "NAP": [
+        {
+            "code": "JFK",
+            "city": "New York",
+            "country": "USA"
+        },
+        {
+            "code": "OSI",
+            "city": "Osijek",
+            "country": "Croatia"
+        },
+        {
+            "code": "ZAG",
+            "city": "Zagreb",
+            "country": "Croatia"
+        }
+    ],
+    "JFK": [
+        {
+            "code": "LAX",
+            "city": "Los Angeles",
+            "country": "USA"
+        },
+        {
+            "code": "OSI",
+            "city": "Osijek",
+            "country": "Croatia"
+        },
+        {
+            "code": "ZAG",
+            "city": "Zagreb",
+            "country": "Croatia"
+        },
+        {
+            "code": "NAP",
+            "city": "Naples",
+            "country": "Italy"
+        }
+    ],
+    "LAX": [
+        {
+            "code": "JFK",
+            "city": "New York",
+            "country": "USA"
+        },
+        {
+            "code": "ZAG",
+            "city": "Zagreb",
+            "country": "Croatia"
+        },
+        {
+            "code": "NAP",
+            "city": "Naples",
+            "country": "Italy"
+        }
+    ],
+    "OSI": [
+        {
+            "code": "ZAG",
+            "city": "Zagreb",
+            "country": "Croatia"
+        }
+    ],
+    "ZAG": [
+        {
+            "code": "LAX",
+            "city": "Los Angeles",
+            "country": "USA"
+        },
+        {
+            "code": "JFK",
+            "city": "New York",
+            "country": "USA"
+        },
+        {
+            "code": "OSI",
+            "city": "Osijek",
+            "country": "Croatia"
+        },
+        {
+            "code": "NAP",
+            "city": "Naples",
+            "country": "Italy"
+        }
+    ]
+}

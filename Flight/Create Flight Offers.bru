@@ -1,0 +1,16 @@
+meta {
+  name: Create Flight Offers
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/api/flights?from=NAP&to=ZAG
+  body: none
+  auth: none
+}
+
+query {
+  from: NAP
+  to: ZAG
+}

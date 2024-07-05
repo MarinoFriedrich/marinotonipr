@@ -1,0 +1,27 @@
+[
+    {
+        "code": "LAX",
+        "city": "Los Angeles",
+        "country": "USA"
+    },
+    {
+        "code": "JFK",
+        "city": "New York",
+        "country": "USA"
+    },
+    {
+        "code": "OSI",
+        "city": "Osijek",
+        "country": "Croatia"
+    },
+    {
+        "code": "ZAG",
+        "city": "Zagreb",
+        "country": "Croatia"
+    },
+    {
+        "code": "NAP",
+        "city": "Naples",
+        "country": "Italy"
+    }
+]
