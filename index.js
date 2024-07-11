@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const expiryDate = flightElement.querySelector('#expiryDate').value;
                     const cvv = flightElement.querySelector('#cvv').value;
 
-                    // Validate input fields
+                    
                     if (!fullName || !email || !phoneNumber || !cardNumber || !expiryDate || !cvv) {
                         alert('Molimo ispunite sva polja.');
                         return;
@@ -171,7 +171,7 @@ function displayBookings(bookings) {
     const ul = document.createElement('ul'); 
     bookings.forEach(booking => {
         const li = document.createElement('li'); 
-        li.textContent = `Let ID: ${booking.id}, Ime: ${booking.userInfo.fullName}, Telefon: ${booking.userInfo.phoneNumber}`; 
+        li.textContent = `Let ID: ${booking.id}, Ime: ${booking.userInfo.fullName}, Telefon: ${booking.userInfo.phoneNumber}, Vrijeme polaska: ${booking.offer.departureTime}, Vrijeme dolaska: ${booking.offer.arrivalTime}`; 
         ul.appendChild(li); 
     });
 
@@ -180,7 +180,7 @@ function displayBookings(bookings) {
 document.addEventListener('DOMContentLoaded', () => {
     const apiURL = 'http://localhost:3000/api';
 
-    // Funkcija za dohvaćanje rezervacija putem email adrese
+
     const fetchBookingsByEmail = (email) => {
         fetch(`${apiURL}/bookings/${encodeURIComponent(email)}`)
             .then(response => response.json())
@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     };
 
-    // Funkcija za prikaz rezervacija
+    
     const displayBookings = (bookings) => {
         const bookingList = document.getElementById('booking-list');
         bookingList.innerHTML = '';
@@ -206,23 +206,22 @@ document.addEventListener('DOMContentLoaded', () => {
         const ul = document.createElement('ul');
         bookings.forEach(booking => {
             const li = document.createElement('li');
-            li.textContent = `Let ID: ${booking.id}, Ime: ${booking.userInfo.fullName}, Telefon: ${booking.userInfo.phoneNumber}`;
-            
-            // Dodaj gumb za brisanje rezervacije
+            li.textContent = `Let ID: ${booking.id}, Ime: ${booking.userInfo.fullName}, Telefon: ${booking.userInfo.phoneNumber}, Vrijeme polaska: ${booking.offer.departureTime}, Vrijeme dolaska: ${booking.offer.arrivalTime}`; 
+       
             const deleteButton = document.createElement('button');
             deleteButton.textContent = 'Obriši';
             deleteButton.addEventListener('click', () => {
                 deleteBooking(booking.id);
             });
             
-            li.appendChild(deleteButton); // Dodaj gumb za brisanje u svaku stavku liste
+            li.appendChild(deleteButton); 
             ul.appendChild(li);
         });
 
         bookingList.appendChild(ul);
     };
 
-    // Funkcija za brisanje rezervacije
+    
     const deleteBooking = (bookingId) => {
         fetch(`${apiURL}/bookings/${bookingId}`, {
             method: 'DELETE'
@@ -230,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => {
             if (response.ok) {
                 alert('Rezervacija uspješno obrisana.');
-                // Ponovno dohvati rezervacije nakon brisanja
+                
                 const email = document.getElementById('email').value;
                 fetchBookingsByEmail(email);
             } else {
@@ -243,7 +242,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Event listener za formu za unos emaila
     const emailForm = document.getElementById('email-form');
     emailForm.addEventListener('submit', (event) => {
         event.preventDefault();
